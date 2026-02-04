@@ -193,6 +193,25 @@
         .quiz-container { text-align: center; }
         .quiz-btn { background: var(--primary); color: white; border: none; padding: 10px 20px; margin: 5px; border-radius: 20px; cursor: pointer; }
     </style>
+    <script>
+        function openModal(element) {
+            document.getElementById("imgModal").style.display = "block";
+            document.getElementById("modalImg").src = element.src;
+        }
+
+        function closeModal() {
+            document.getElementById("imgModal").style.display = "none";
+        }
+
+        // 모달 영역 외의 배경을 클릭해도 닫히게 하고 싶을 때 추가
+        window.onclick = function(event) {
+            var modal = document.getElementById("imgModal");
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+    
 </head>
 <body>
 
@@ -314,6 +333,7 @@
 
 </body>
 </html>
+
 
 
 
